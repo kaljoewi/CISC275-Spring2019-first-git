@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import Dog.java;
 
 public class MyCompare3 {
 	
@@ -13,12 +14,7 @@ public class MyCompare3 {
 		dogs.add(new Dog("Alfie", 4));
 
 		System.out.println(dogs);
-		Collections.sort(dogs, new Comparator<Animal>(){
-			@Override
-			public int compare(Animal a, Animal b){
-			    return a.getLegs() - b.getLegs();
-			}
-		});
+		Collections.sort(dogs, new SortDogs());
 		System.out.println(dogs);
 	}
 }
